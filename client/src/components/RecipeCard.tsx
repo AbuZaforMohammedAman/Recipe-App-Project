@@ -77,11 +77,12 @@ export default function RecipeCard({ recipe, size = 'medium', showAddToCart = tr
             </Badge>
           </div>
           
-          {size !== 'small' && (
-            <p className="text-gray-600 mb-4 line-clamp-2">
-              {recipe.instructions.substring(0, 100)}...
-            </p>
-          )}
+          <p className={`text-gray-600 mb-4 line-clamp-2 ${size === 'small' ? 'text-sm' : ''}`}>
+            {recipe.instructions && recipe.instructions.length > 0 
+              ? `${recipe.instructions.substring(0, size === 'small' ? 80 : 100)}...`
+              : 'Delicious recipe with detailed cooking instructions.'
+            }
+          </p>
           
           <div className="flex items-center justify-between">
             <div className="flex items-center text-sm text-gray-500">
