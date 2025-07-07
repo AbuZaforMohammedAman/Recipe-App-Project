@@ -15,7 +15,7 @@ interface RecipeCardProps {
 
 export default function RecipeCard({ recipe, size = 'medium', showAddToCart = true }: RecipeCardProps) {
   const { addToCart, isInCart } = useCart();
-  const cookingTime = estimateCookingTime(recipe.instructions);
+  const cookingTime = estimateCookingTime(recipe.instructions || '');
 
   const handleAddToCart = async (e: React.MouseEvent) => {
     e.preventDefault();

@@ -52,13 +52,22 @@ export class MemStorage implements IStorage {
 
   async addToCart(cartItem: InsertCart): Promise<Cart> {
     const id = this.currentCartId++;
-    const cart: Cart = { ...cartItem, id };
+    const cart: Cart = { 
+      id,
+      userId: cartItem.userId || null,
+      recipeId: cartItem.recipeId,
+      recipeName: cartItem.recipeName,
+      recipeImage: cartItem.recipeImage || null,
+      cookingTime: cartItem.cookingTime || null,
+      addedAt: cartItem.addedAt
+    };
     this.carts.set(id, cart);
     return cart;
   }
 
   async removeFromCart(userId: number, recipeId: string): Promise<void> {
-    for (const [id, cartItem] of this.carts.entries()) {
+    const entries = Array.from(this.carts.entries());
+    for (const [id, cartItem] of entries) {
       if (cartItem.userId === userId && cartItem.recipeId === recipeId) {
         this.carts.delete(id);
         break;

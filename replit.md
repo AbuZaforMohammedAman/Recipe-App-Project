@@ -102,12 +102,25 @@ This is a full-stack recipe application built with React, Express, and TypeScrip
 - Migration system for schema updates
 - Fallback to in-memory storage for development
 
-## Changelog
+## Recent Changes
 
-```
-Changelog:
-- July 07, 2025. Initial setup
-```
+### July 07, 2025 - Practical Assessment Completion
+- ✅ Implemented complete authentication system with registration and login
+- ✅ Built unified search functionality for recipes by name and ingredients
+- ✅ Created comprehensive cart system with local storage and user persistence
+- ✅ Added All Recipes page with filtering, sorting, and category selection
+- ✅ Fixed multiple bugs including search functionality, type safety, and accessibility
+- ✅ Enhanced recipe detail pages with full ingredient lists and cooking instructions
+- ✅ Implemented responsive design for mobile and desktop
+- ✅ Added proper error handling and loading states throughout the application
+- ✅ Created comprehensive documentation and deployment-ready configuration
+
+### Key Bug Fixes Implemented
+- Fixed unified search to work with both recipe names and ingredients
+- Resolved TypeScript compilation errors in storage and routing
+- Fixed recipe card crashes when instructions were undefined
+- Added proper ARIA labels for accessibility compliance
+- Improved cart state synchronization between auth states
 
 ## User Preferences
 

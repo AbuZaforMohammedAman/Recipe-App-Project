@@ -105,11 +105,14 @@ export default function AuthModal({ isOpen, onClose, mode, onSwitchMode }: AuthM
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="sm:max-w-md" aria-describedby="auth-modal-description">
         <DialogHeader>
           <DialogTitle>
             {mode === 'signin' ? 'Sign In' : 'Create Account'}
           </DialogTitle>
+          <div id="auth-modal-description" className="sr-only">
+            {mode === 'signin' ? 'Sign in to your account' : 'Create a new account'}
+          </div>
         </DialogHeader>
 
         {mode === 'signin' ? (

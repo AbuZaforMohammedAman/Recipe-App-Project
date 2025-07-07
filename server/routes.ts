@@ -26,8 +26,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       // Combine and deduplicate results
       const allResults = [...nameResults];
-      ingredientResults.forEach(meal => {
-        if (!allResults.find(existing => existing.idMeal === meal.idMeal)) {
+      ingredientResults.forEach((meal: any) => {
+        if (!allResults.find((existing: any) => existing.idMeal === meal.idMeal)) {
           allResults.push(meal);
         }
       });
