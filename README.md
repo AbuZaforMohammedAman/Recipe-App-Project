@@ -170,17 +170,5 @@ npm run dev
 
 3. Open your browser to `http://localhost:5000`
 
-## Deployment Ready
 
-The application is fully deployment-ready with:
-- Production build configuration
-- Environment variable support
-- Static asset serving
-- Proper error handling
-- SEO-friendly routing
 
----
-
-*Built with modern web technologies and best practices for a seamless recipe discovery experience.*
-
-https://replit.com/@AzmAman/PracticalTracker
