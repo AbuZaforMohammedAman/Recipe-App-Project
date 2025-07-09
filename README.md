@@ -182,3 +182,5 @@ The application is fully deployment-ready with:
 ---
 
 *Built with modern web technologies and best practices for a seamless recipe discovery experience.*
+
+https://replit.com/@AzmAman/PracticalTracker
